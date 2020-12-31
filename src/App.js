@@ -1,9 +1,10 @@
 import './App.css';
+import TopNav from './components/TopNav';
 
 function App() {
   return (
     <div className="App">
-      <span>Test</span>
+      <TopNav/>
     </div>
   );
 }
