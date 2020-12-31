@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, Button, IconButton,  } from '@material-ui/core';
-import { Menu as MenuIcon } from '@material-ui/icons';
+import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,15 +19,17 @@ const TopNav = () => {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar position="static" style={{backgroundColor:"#FB9F00"}}>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              News
+              FoodKoala
             </Typography>
-            <Button color="inherit">Login</Button>
+            <IconButton>
+              <SearchIcon style={{color:"#fff"}}/>
+            </IconButton>
           </Toolbar>
         </AppBar>
       </div>
