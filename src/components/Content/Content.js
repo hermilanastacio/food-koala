@@ -42,6 +42,8 @@ const Content = () => {
       <p>lorem ipsum dolor sit amet</p>
       <p>lorem ipsum dolor sit amet</p>
       <p>lorem ipsum dolor sit amet</p>
+      <p>lorem ipsum dolor sit amet</p>
+      <p>lorem ipsum dolor sit amet</p>
     </div>
   );
 }

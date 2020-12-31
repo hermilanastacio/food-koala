@@ -1,7 +1,7 @@
 import './App.css';
-import TopNav from './components/TopNav';
-import BottomNav from './components/BottomNav';
-import Content from './components/Content';
+import TopNav from './components/TopNav/TopNav';
+import BottomNav from './components/BottomNav/BottomNav';
+import Content from './components/Content/Content';
 
 function App() {
   return (
