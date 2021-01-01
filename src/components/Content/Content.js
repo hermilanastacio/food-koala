@@ -11,7 +11,7 @@ const Content = ({ onToggle }) => {
   return (
     <div style={{backgroundColor:"#EDF2F3", flexGrow: 1, overflowY:"scroll"}}>
       <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr", margin: ".5em", gridGap: ".5em"}}>
-        {arr.map(() => 
+        {arr.map(index => 
           <div style={{
             backgroundColor:"#fff", 
             borderRadius:3,
@@ -19,6 +19,7 @@ const Content = ({ onToggle }) => {
             MozBoxShadow: "0px 0px 9px 1px rgba(0,0,0,0.2)", 
             boxShadow: "0px 0px 9px 1px rgba(0,0,0,0.2)"}}
             onClick={onToggle}
+            key={index}
           >
             <p style={{textAlign:"center", margin: "10px 0 5px 0"}}>
               <img src={milkTea} alt="Product" style={{height:70}}/>
