@@ -1,8 +1,12 @@
 import { Button } from '@material-ui/core';
-import milkTea from '../../assets/products/milktea.png'; 
+import milkTea from '../../assets/products/milktea.png';
 
 const Content = ({ onToggle }) => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+  const addToCart = (e) => {
+    e.stopPropagation();
+  }
   
   return (
     <div style={{backgroundColor:"#EDF2F3", flexGrow: 1, overflowY:"scroll"}}>
@@ -22,7 +26,7 @@ const Content = ({ onToggle }) => {
             <h5 style={{textAlign:"center", margin: 0}}>Match Milk Tea</h5>
             <p style={{textAlign:"center", margin: "5px 0"}}>₱ 120.00</p>
             <p style={{textAlign:"center", margin: "10px 0"}}>
-              <Button variant="contained" style={{backgroundColor:"#FB9F00", color:"#fff", padding: "3px 7px", fontSize:8}}>Add to cart</Button>
+              <Button variant="contained" onClick={e => addToCart(e)} style={{backgroundColor:"#FB9F00", color:"#fff", padding: "3px 7px", fontSize:8}}>Add to cart</Button>
             </p>
           </div>
         )}
