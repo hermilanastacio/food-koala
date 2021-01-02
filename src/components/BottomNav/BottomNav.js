@@ -13,9 +13,13 @@ import {
 const useStyles = makeStyles({
   root: {
     width: "100%",
-    WebkitBoxShadow: "0px -2px 5px 0px rgba(0,0,0,0.13)",
-    MozBoxShadow: "0px -2px 5px 0px rgba(0,0,0,0.13)",
-    boxShadow: "0px -2px 5px 0px rgba(0,0,0,0.13)"
+    WebkitBoxShadow: "0px -2px 5px 0px rgba(0,0,0,0.25)",
+    MozBoxShadow: "0px -2px 5px 0px rgba(0,0,0,0.25)",
+    boxShadow: "0px -2px 5px 0px rgba(0,0,0,0.25)",
+
+    "& .Mui-selected": {
+      color:"#FB9F00"
+    }
   },
 });
 
@@ -41,12 +45,18 @@ const BottomNav = () => {
         onClick={() => handleRedirect("/")}
         icon={<HomeIcon/>} 
       />
-      <BottomNavigationAction icon={<FavoriteBorderIcon/>} />
+      <BottomNavigationAction 
+        icon={<FavoriteBorderIcon/>}
+        disabled 
+      />
       <BottomNavigationAction 
         onClick={() => handleRedirect("/cart")}
         icon={<ShoppingCartIcon/>} 
       />
-      <BottomNavigationAction icon={<MenuIcon/>} />
+      <BottomNavigationAction 
+        icon={<MenuIcon/>}
+        disabled 
+      />
     </BottomNavigation>
   );
 }
