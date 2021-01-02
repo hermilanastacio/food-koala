@@ -1,33 +1,21 @@
 {
   "files": {
     "main.css": "/food-koala/static/css/main.4656de56.chunk.css",
-    "main.js": "/food-koala/static/js/main.af85e8b0.chunk.js",
-    "main.js.map": "/food-koala/static/js/main.af85e8b0.chunk.js.map",
+    "main.js": "/food-koala/static/js/main.c39676dd.chunk.js",
+    "main.js.map": "/food-koala/static/js/main.c39676dd.chunk.js.map",
     "runtime-main.js": "/food-koala/static/js/runtime-main.ca6f2ed8.js",
     "runtime-main.js.map": "/food-koala/static/js/runtime-main.ca6f2ed8.js.map",
-    "static/js/2.75e95035.chunk.js": "/food-koala/static/js/2.75e95035.chunk.js",
-    "static/js/2.75e95035.chunk.js.map": "/food-koala/static/js/2.75e95035.chunk.js.map",
+    "static/js/2.ad151b97.chunk.js": "/food-koala/static/js/2.ad151b97.chunk.js",
+    "static/js/2.ad151b97.chunk.js.map": "/food-koala/static/js/2.ad151b97.chunk.js.map",
     "index.html": "/food-koala/index.html",
     "static/css/main.4656de56.chunk.css.map": "/food-koala/static/css/main.4656de56.chunk.css.map",
-    "static/js/2.75e95035.chunk.js.LICENSE.txt": "/food-koala/static/js/2.75e95035.chunk.js.LICENSE.txt",
-    "static/media/avocado-milk-tea.png": "/food-koala/static/media/avocado-milk-tea.1ff2dba6.png",
-    "static/media/cheese-milk-tea.png": "/food-koala/static/media/cheese-milk-tea.cd7f5349.png",
-    "static/media/choco-milk-tea.png": "/food-koala/static/media/choco-milk-tea.c4a93173.png",
-    "static/media/coffee-milk-tea.png": "/food-koala/static/media/coffee-milk-tea.2fabac15.png",
-    "static/media/green-milk-tea.png": "/food-koala/static/media/green-milk-tea.070da752.png",
-    "static/media/guava-milk-tea.png": "/food-koala/static/media/guava-milk-tea.de628955.png",
-    "static/media/lemon-milk-tea.png": "/food-koala/static/media/lemon-milk-tea.d50804c1.png",
-    "static/media/mango-milk-tea.png": "/food-koala/static/media/mango-milk-tea.4657a09c.png",
-    "static/media/matcha-milk-tea.png": "/food-koala/static/media/matcha-milk-tea.58ab2a81.png",
-    "static/media/milktea.58ab2a81.png": "/food-koala/static/media/milktea.58ab2a81.png",
-    "static/media/mocha-milk-tea.png": "/food-koala/static/media/mocha-milk-tea.39541d98.png",
-    "static/media/orange-milk-tea.png": "/food-koala/static/media/orange-milk-tea.cbb60313.png",
-    "static/media/vanilla-milk-tea.png": "/food-koala/static/media/vanilla-milk-tea.e37f02b3.png"
+    "static/js/2.ad151b97.chunk.js.LICENSE.txt": "/food-koala/static/js/2.ad151b97.chunk.js.LICENSE.txt",
+    "static/media/milktea.58ab2a81.png": "/food-koala/static/media/milktea.58ab2a81.png"
   },
   "entrypoints": [
     "static/js/runtime-main.ca6f2ed8.js",
-    "static/js/2.75e95035.chunk.js",
+    "static/js/2.ad151b97.chunk.js",
     "static/css/main.4656de56.chunk.css",
-    "static/js/main.af85e8b0.chunk.js"
+    "static/js/main.c39676dd.chunk.js"
   ]
 }
