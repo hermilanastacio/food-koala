@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
 import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
 import SearchField from '../SearchField/SearchField';
+import { useStore } from '../../common/store';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -13,8 +14,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TopNav = ({ toggleDrawer }) => {
+const TopNav = () => {
     const [isSearch, setIsSearch] = useState(false);
+    const { appStore } = useStore();
     const classes = useStyles();
 
     return (
@@ -24,7 +26,7 @@ const TopNav = ({ toggleDrawer }) => {
             {isSearch 
               ? <SearchField setIsSearch={setIsSearch}/> 
               : <Fragment>
-                  <IconButton edge="start" onClick={toggleDrawer('left', true)} className={classes.menuButton} color="inherit" aria-label="menu">
+                  <IconButton edge="start" onClick={appStore.toggleSideNav('left', true)} className={classes.menuButton} color="inherit" aria-label="menu">
                     <MenuIcon />
                   </IconButton>
                   <Typography variant="h6" className={classes.title}>

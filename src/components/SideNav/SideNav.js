@@ -11,6 +11,8 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Collapse from '@material-ui/core/Collapse';
 import StarBorder from '@material-ui/icons/StarBorder';
+import { useStore } from '../../common/store';
+import { observer } from 'mobx-react';
 
 const useStyles = makeStyles((theme) => ({
   list: {
@@ -24,8 +26,9 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const SideNav = ({ toggleDrawer, state }) => {
+const SideNav = () => {
   const [open, setOpen] = React.useState(true);
+  const { appStore } = useStore();
   const classes = useStyles();
 
   const handleClick = (e) => {
@@ -39,8 +42,8 @@ const SideNav = ({ toggleDrawer, state }) => {
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={appStore.toggleSideNav(anchor, false)}
+      onKeyDown={appStore.toggleSideNav(anchor, false)}
     >
       <List>
         <ListItem button>
@@ -118,7 +121,7 @@ const SideNav = ({ toggleDrawer, state }) => {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+          <Drawer anchor={anchor} open={appStore.showSideNav[anchor]} onClose={appStore.toggleSideNav(anchor, false)}>
             {list(anchor)}
           </Drawer>
         </React.Fragment>
@@ -127,4 +130,4 @@ const SideNav = ({ toggleDrawer, state }) => {
   );
 }
 
-export default SideNav;
+export default observer(SideNav);
