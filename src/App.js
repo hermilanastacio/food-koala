@@ -8,6 +8,15 @@ import SideNav from './components/SideNav/SideNav';
 
 function App() {
   const [open, setOpen] = useState(false);
+  const [state, setState] = useState({ left: false });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
 
   const toggleModal = () => {
     setOpen(!open);
@@ -19,8 +28,13 @@ function App() {
         onToggle={toggleModal}
         open={open} 
       />
-      <SideNav/>
-      <TopNav/>
+      <SideNav
+        state={state}
+        toggleDrawer={toggleDrawer}
+      />
+      <TopNav
+        toggleDrawer={toggleDrawer}
+      />
       <Content 
         onToggle={toggleModal}
       />

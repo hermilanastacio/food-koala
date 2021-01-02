@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TopNav = () => {
+const TopNav = ({ toggleDrawer }) => {
     const [isSearch, setIsSearch] = useState(false);
     const classes = useStyles();
 
@@ -24,8 +24,8 @@ const TopNav = () => {
             {isSearch 
               ? <SearchField setIsSearch={setIsSearch}/> 
               : <Fragment>
-                  <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                  <MenuIcon />
+                  <IconButton edge="start" onClick={toggleDrawer('left', true)} className={classes.menuButton} color="inherit" aria-label="menu">
+                    <MenuIcon />
                   </IconButton>
                   <Typography variant="h6" className={classes.title}>
                     FoodKoala
