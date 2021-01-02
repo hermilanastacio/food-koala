@@ -1,5 +1,4 @@
 import { Button } from '@material-ui/core';
-import milkTea from '../../assets/products/milktea.png';
 import products from '../../data/products.json';
 
 const Content = ({ onToggle }) => {
@@ -22,7 +21,7 @@ const Content = ({ onToggle }) => {
             key={index}
           >
             <p style={{textAlign:"center", margin: "10px 0 5px 0"}}>
-              <img src={milkTea} alt="Product" style={{height:70}}/>
+              <img src={`/products/${product.imageName}`} alt="Product" style={{height:70}}/>
             </p>
             <h5 style={{textAlign:"center", margin: 0}}>{product.name}</h5>
             <p style={{textAlign:"center", margin: "5px 0"}}>₱{product.price}</p>

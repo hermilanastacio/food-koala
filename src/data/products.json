@@ -2,120 +2,140 @@
   {
     "id": "753c09e7-ca1d-4ad2-a6b7-d9c2993eb06b",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "79",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "a9c20d5c-38f9-405e-ba8d-ffec7680b7e8",
     "name": "Mocha Milk Tea",
+    "imageName": "mocha-milk-tea.png",
     "price": "82",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "9ae65ce5-3806-4b7c-af5c-5dd23ee8d81f",
     "name": "Choco Milk Tea",
+    "imageName": "choco-milk-tea.png",
     "price": "75",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "65785a06-2ded-478b-b5c1-07125f45ed98",
     "name": "Coffee Milk Tea",
+    "imageName": "coffee-milk-tea.png",
     "price": "92",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "3b7d4393-2302-4ae3-a1a5-65b8f35f5431",
     "name": "Vanilla Milk Tea",
+    "imageName": "vanilla-milk-tea.png",
     "price": "72",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "75d61ffa-fe9f-40f5-9c6f-d14e2017d6d7",
     "name": "Mango Milk Tea",
+    "imageName": "mango-milk-tea.png",
     "price": "79",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "6f25c076-a19e-415d-b382-6e260d04702e",
     "name": "Orange Milk Tea",
+    "imageName": "orange-milk-tea.png",
     "price": "99",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "6de4e83e-2212-49b3-a3fc-adfbd7f7031c",
     "name": "Guava Milk Tea",
+    "imageName": "guava-milk-tea.png",
     "price": "78",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "0f949f5b-97ba-42a0-8f4b-fe9a1632d34c",
     "name": "Lemon Milk Tea",
+    "imageName": "lemon-milk-tea.png",
     "price": "90",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "d7b18585-f26d-43a4-be4a-5d2c3aa1f1d4",
     "name": "Cheese Milk Tea",
+    "imageName": "cheese-milk-tea.png",
     "price": "76",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "a47540ac-2df3-4008-ad08-050f9c0c58e4",
-    "name": "Matcha Milk Tea",
+    "name": "Green Milk Tea",
+    "imageName": "green-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "2f52dd46-dc86-4d23-9a43-71e2d799dab1",
-    "name": "Matcha Milk Tea",
+    "name": "Avocado Milk Tea",
+    "imageName": "avocado-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "2ccc1533-1dea-4482-9b35-fd1b2b885f88",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "03775809-2f9c-4291-9d74-1e1ca05cb1fe",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "39169fec-2501-4a86-ae3a-5273e93c8b02",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "9d27c161-fc33-4a91-8572-29fd0d0c7a43",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "2d82edbf-3310-4af3-91f5-372934671aff",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "3f8b7579-4110-48f8-8ef4-033f2b4f7a15",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "f258c00e-e60a-4faa-a623-34893619849c",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   },
   {
     "id": "579fc1b8-3a89-49f5-bc7f-cb7bda3fd559",
     "name": "Matcha Milk Tea",
+    "imageName": "matcha-milk-tea.png",
     "price": "200",
     "description": "lorem ipsum dolor sit amet"
   }
