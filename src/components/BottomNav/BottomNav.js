@@ -10,6 +10,7 @@ import {
   Menu as MenuIcon
 } from '@material-ui/icons';
 import { useStore } from '../../common/store';
+import { observer } from 'mobx-react';
 
 const useStyles = makeStyles({
   root: {
@@ -52,7 +53,12 @@ const BottomNav = () => {
       />
       <BottomNavigationAction 
         onClick={() => handleRedirect("/cart")}
-        icon={<ShoppingCartIcon/>} 
+        icon={
+          <div style={{position:"relative"}}>
+            {appStore.cart.length > 0 && <div style={{backgroundColor:"#f53400", color:"#fff", borderRadius:"50%", height:15, width:15, fontSize: 9, display:"flex", alignItems:"center", justifyContent:"center", position:"absolute", right:-8, top:-7}}>{appStore.cart.length}</div>}
+            <ShoppingCartIcon/>
+          </div>
+        } 
       />
       <BottomNavigationAction 
         icon={<MenuIcon/>}
@@ -62,4 +68,4 @@ const BottomNav = () => {
   );
 }
  
-export default BottomNav;
+export default observer(BottomNav);
