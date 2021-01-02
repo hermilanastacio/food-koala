@@ -5,7 +5,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import { Close as CloseIcon } from '@material-ui/icons';
-import milkTea from '../../assets/products/milktea.png';
 import { useStore } from '../../common/store';
 import { observer } from 'mobx-react';
 
@@ -25,15 +24,16 @@ const Details = () => {
       </div>
 
       <DialogContent>
-        <div style={{textAlign:"center"}}>
-          <img src={milkTea} alt="Product" style={{height: 150}}/>
+        <div style={{textAlign:"center", position:"relative"}}>
+          {appStore.selectedProduct.isNew && <span style={{ clipPath:"polygon(0 0, 100% 0%, 84% 100%, 0% 100%)", backgroundColor:"#de0c17", fontSize:9, fontWeight:"bold", position:"absolute", top:-7, left:0, padding:"2px 10px 2px 5px", color:"#fff"}}>NEW</span>}
+          {appStore.selectedProduct.isBestSeller && <span style={{clipPath:"polygon(0 0, 100% 0%, 84% 100%, 0% 100%)", backgroundColor:"#de0c17", fontSize:9, fontWeight:"bold", position:"absolute", top:-7, left:0, padding:"2px 15px 2px 5px", color:"#fff"}}>BEST SELLER</span>}
+          <img src={(`${process.env.REACT_APP_BASE_URL}/products/${appStore.selectedProduct.imageName}`)} alt="Product" style={{height: 150}}/>
         </div>
-        <h3>Matcha Milk Tea</h3>
+        <h3>{appStore.selectedProduct.name}</h3>
         <DialogContentText id="alert-dialog-description">
-          Let Google help apps determine location. This means sending anonymous location data to
-          Google.
+          {appStore.selectedProduct.description}
         </DialogContentText>
-        <p>₱ 120.00</p>
+        <p>₱{appStore.selectedProduct.price} <del style={{fontSize:9, color:"#c1bcbc"}}>{`${appStore.selectedProduct.oldPrice ? `₱${appStore.selectedProduct.oldPrice}` : ''}`}</del></p>
       </DialogContent>
       <DialogActions>
         <Button onClick={() => appStore.toggleDetailsModal(false)} color="primary">
