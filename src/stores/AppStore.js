@@ -32,12 +32,4 @@ export default class AppStore {
     
     this.setShowSideNav({ ...this.showSideNav, [anchor]: open });
   }
-
-  // const toggleDrawer = (anchor, open) => (event) => {
-  //   if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-  //     return;
-  //   }
-
-  //   setState({ ...state, [anchor]: open });
-  // };
 }
