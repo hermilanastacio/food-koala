@@ -6,8 +6,9 @@ import { observer } from 'mobx-react';
 const Content = () => {
   const { appStore } = useStore();
 
-  const addToCart = (e) => {
-    e.stopPropagation();
+  const addToCart = (product, event) => {
+    event.stopPropagation();
+    appStore.addToCart(product);
   }
 
   const selectProduct = (product) => {
@@ -36,7 +37,7 @@ const Content = () => {
             <h5 style={{textAlign:"center", margin: 0}}>{product.name}</h5>
             <p style={{textAlign:"center", margin: "5px 0"}}>₱{product.price} <del style={{fontSize:9, color:"#c1bcbc"}}>{`${product.oldPrice ? `₱${product.oldPrice}` : ''}`}</del></p>
             <p style={{textAlign:"center", margin: "10px 0"}}>
-              <Button variant="contained" onClick={e => addToCart(e)} style={{backgroundColor:"#FB9F00", color:"#fff", padding: "3px 7px", fontSize:8}}>Add to cart</Button>
+              <Button variant="contained" onClick={event => addToCart(product, event)} style={{backgroundColor:"#FB9F00", color:"#fff", padding: "3px 7px", fontSize:8}}>Add to cart</Button>
             </p>
           </div>
         )}

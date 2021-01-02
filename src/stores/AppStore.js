@@ -3,6 +3,8 @@ import { observable, action } from 'mobx';
 export default class AppStore {
   @observable showDetailsModal = false;
 
+  @observable cart = [];
+
   @observable showSideNav = { left: false };
 
   @observable selectedProduct = {};
@@ -15,6 +17,10 @@ export default class AppStore {
 
   @action setSelectedProduct(product) {
     this.selectedProduct = product;
+  }
+
+  @action addToCart(product) {
+    this.cart = [ ...this.cart, product ];
   }
 
   @action setActiveTab(tab) {
