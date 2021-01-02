@@ -3,7 +3,7 @@ import products from '../../data/products.json';
 import { useStore } from '../../common/store';
 import { observer } from 'mobx-react';
 
-const Content = ({ onToggle }) => {
+const Content = () => {
   const { appStore } = useStore();
 
   const addToCart = (e) => {
