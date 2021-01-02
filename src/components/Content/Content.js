@@ -12,7 +12,6 @@ const Content = ({ onToggle }) => {
   
   return (
     <div style={{backgroundColor:"#EDF2F3", flexGrow: 1, overflowY:"scroll"}}>
-      <h1>{appStore.test}</h1>
       <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr", margin: ".5em", gridGap: ".5em"}}>
         {products.map((product, index) => 
           <div style={{
@@ -21,7 +20,7 @@ const Content = ({ onToggle }) => {
             WebkitBoxShadow: "0px 0px 9px 1px rgba(0,0,0,0.2)", 
             MozBoxShadow: "0px 0px 9px 1px rgba(0,0,0,0.2)", 
             boxShadow: "0px 0px 9px 1px rgba(0,0,0,0.2)"}}
-            onClick={() => appStore.tesFunc("SADASD")}
+            onClick={() => appStore.toggleDetailsModal(true)}
             key={index}
           >
             <div style={{textAlign:"center", margin: "10px 0 5px 0", paddingTop: product.isNew || product.isBestSeller ? 15 : 0, position:"relative"}}>

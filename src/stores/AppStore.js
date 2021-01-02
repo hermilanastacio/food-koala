@@ -1,9 +1,9 @@
 import { observable, action } from 'mobx';
 
 export default class AppStore {
-  @observable test = "Test";
+  @observable showDetailsModal = false;
 
-  @action tesFunc(param) {
-    this.test = param;
+  @action toggleDetailsModal(state) {
+    this.showDetailsModal = state;
   }
 }

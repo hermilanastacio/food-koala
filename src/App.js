@@ -7,7 +7,6 @@ import Details from './components/Details/Details';
 import SideNav from './components/SideNav/SideNav';
 
 function App() {
-  const [open, setOpen] = useState(false);
   const [state, setState] = useState({ left: false });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -18,16 +17,9 @@ function App() {
     setState({ ...state, [anchor]: open });
   };
 
-  const toggleModal = () => {
-    setOpen(!open);
-  };
-
   return (
     <div className="App">
-      <Details 
-        onToggle={toggleModal}
-        open={open} 
-      />
+      <Details/>
       <SideNav
         state={state}
         toggleDrawer={toggleDrawer}
@@ -35,9 +27,7 @@ function App() {
       <TopNav
         toggleDrawer={toggleDrawer}
       />
-      <Content 
-        onToggle={toggleModal}
-      />
+      <Content/>
       <BottomNav/>
     </div>
   );

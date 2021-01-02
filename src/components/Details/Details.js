@@ -6,19 +6,22 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import { Close as CloseIcon } from '@material-ui/icons';
 import milkTea from '../../assets/products/milktea.png';
+import { useStore } from '../../common/store';
+import { observer } from 'mobx-react';
 
-const Details = ({ onToggle, open }) => {
+const Details = () => {
+  const { appStore } = useStore();
 
   return (
     <Dialog
-      open={open}
-      onClose={onToggle}
+      open={appStore.showDetailsModal}
+      onClose={() => appStore.toggleDetailsModal(false)}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
       <div style={{display:"flex", justifyContent:"space-between", margin:20}}>
         <h3 style={{margin:0}}>Product Details</h3>
-        <CloseIcon onClick={onToggle}/>
+        <CloseIcon onClick={() => appStore.toggleDetailsModal(false)}/>
       </div>
 
       <DialogContent>
@@ -33,10 +36,10 @@ const Details = ({ onToggle, open }) => {
         <p>₱ 120.00</p>
       </DialogContent>
       <DialogActions>
-        <Button onClick={onToggle} color="primary">
+        <Button onClick={() => appStore.toggleDetailsModal(false)} color="primary">
           Cancel
         </Button>
-        <Button onClick={onToggle} variant="contained" style={{backgroundColor:"#FB9F00", color:"#fff"}} autoFocus>
+        <Button onClick={() => appStore.toggleDetailsModal(false)} variant="contained" style={{backgroundColor:"#FB9F00", color:"#fff"}} autoFocus>
           Add to cart
         </Button>
       </DialogActions>
@@ -44,4 +47,4 @@ const Details = ({ onToggle, open }) => {
   );
 }
  
-export default Details;
+export default observer(Details);
