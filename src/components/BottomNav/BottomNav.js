@@ -9,6 +9,7 @@ import {
   ShoppingCart as ShoppingCartIcon,
   Menu as MenuIcon
 } from '@material-ui/icons';
+import { useStore } from '../../common/store';
 
 const useStyles = makeStyles({
   root: {
@@ -24,19 +25,19 @@ const useStyles = makeStyles({
 });
 
 const BottomNav = () => {
-  const [value, setValue] = React.useState(0);
+  const { appStore } = useStore();
   const classes = useStyles();
   const history = useHistory();
 
   const handleRedirect = (path) => {
     history.push(path);
   }
-  
+
   return (
     <BottomNavigation
-      value={value}
+      value={appStore.activeTab}
       onChange={(_, newValue) => {
-        setValue(newValue);
+        appStore.setActiveTab(newValue)
       }}
       showLabels
       className={classes.root}
