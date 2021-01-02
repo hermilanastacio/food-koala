@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
@@ -19,8 +20,13 @@ const useStyles = makeStyles({
 });
 
 const BottomNav = () => {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
+  const classes = useStyles();
+  const history = useHistory();
+
+  const handleRedirect = (path) => {
+    history.push(path);
+  }
   
   return (
     <BottomNavigation
@@ -31,9 +37,15 @@ const BottomNav = () => {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction icon={<HomeIcon/>} />
+      <BottomNavigationAction 
+        onClick={() => handleRedirect("/")}
+        icon={<HomeIcon/>} 
+      />
       <BottomNavigationAction icon={<FavoriteBorderIcon/>} />
-      <BottomNavigationAction icon={<ShoppingCartIcon/>} />
+      <BottomNavigationAction 
+        onClick={() => handleRedirect("/cart")}
+        icon={<ShoppingCartIcon/>} 
+      />
       <BottomNavigationAction icon={<MenuIcon/>} />
     </BottomNavigation>
   );
