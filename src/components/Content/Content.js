@@ -20,9 +20,11 @@ const Content = ({ onToggle }) => {
             onClick={onToggle}
             key={index}
           >
-            <p style={{textAlign:"center", margin: "10px 0 5px 0"}}>
-              <img src={`/products/${product.imageName}`} alt="Product" style={{height:70}}/>
-            </p>
+            <div style={{textAlign:"center", margin: "10px 0 5px 0", paddingTop: product.isNew || product.isBestSeller ? 15 : 0, position:"relative"}}>
+              {product.isNew && <span style={{backgroundColor:"#de0c17", fontSize:9, fontWeight:"bold", position:"absolute", top:-7, left:0, padding:"2px 5px 2px 5px", color:"#fff"}}>NEW</span>}
+              {product.isBestSeller && <span style={{backgroundColor:"#de0c17", fontSize:9, fontWeight:"bold", position:"absolute", top:-7, left:0, padding:"2px 5px 2px 5px", color:"#fff"}}>BEST SELLER</span>}
+              <img src={(`${process.env.REACT_APP_BASE_URL}/products/${product.imageName}`)} alt="Product" style={{height:70}}/>
+            </div>
             <h5 style={{textAlign:"center", margin: 0}}>{product.name}</h5>
             <p style={{textAlign:"center", margin: "5px 0"}}>₱{product.price}</p>
             <p style={{textAlign:"center", margin: "10px 0"}}>
